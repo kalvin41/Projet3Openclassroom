@@ -1,0 +1,25 @@
+// Mixin pour le style de la carte
+@mixin card-style {
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+  }
+  
+  // Mixin pour l'image dans la carte
+  @mixin card-img-style {
+    object-fit: cover;
+  }
+  
+  // Mixin pour le titre de la carte
+  @mixin card-title-style {
+    font-size: 16px;
+  }
+//   Mixin pour police des titres
+  @mixin font-title {
+    font-family: "Shrikhand";
+  }
+//   Mixin pour le texte
+  @mixin font-text {
+    font-family: "Roboto";
+  }
