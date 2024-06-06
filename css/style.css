@@ -65,7 +65,7 @@ header .bg {
   height: 360px;
 }
 
-p, h2, h1 {
+p, h2, h1, a {
   font-family: "Roboto";
 }
 
@@ -179,4 +179,36 @@ p, h2, h1 {
 }
 .restaurants .card #regular-heart:hover + #solid-heart {
   display: inline-block;
+}
+
+footer {
+  background-color: #353535;
+  height: 250px;
+}
+footer img {
+  width: 120px;
+  margin-top: 25px;
+  margin-left: 40px;
+  filter: brightness(10000%);
+}
+footer ul {
+  list-style: none;
+}
+footer ul li {
+  margin-bottom: 10px;
+}
+footer ul li i {
+  color: white;
+}
+footer ul li .fa-utensils {
+  margin-right: 12px;
+  font-size: small;
+}
+footer ul li .fa-handshake-angle {
+  margin-right: 7px;
+  font-size: small;
+}
+footer ul li a {
+  text-decoration: none;
+  color: white;
 }/*# sourceMappingURL=style.css.map */
