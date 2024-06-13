@@ -235,6 +235,9 @@ header .flex {
   justify-content: space-between; /* Centre horizontalement */
   align-items: center; /* Centre verticalement */
 }
+header .flex a {
+  color: black;
+}
 header .fa-arrow-right {
   margin-left: 20px;
   font-size: large;
