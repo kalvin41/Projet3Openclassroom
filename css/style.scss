@@ -352,7 +352,7 @@ header {
             width: 45px;
         }
         .card{
-            position: relative;
+            padding: 0;
             margin-bottom: 10px;
             filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.05));
             .card-content{
@@ -372,18 +372,38 @@ header {
                 font-weight: bold;
             }
             .bigcheck{
-                height: 50px;
+                height: 75px;
+                width: 60px;
                 top: 0;
                 right: 0;
                 background-color: $tertiaire-color;
                 border-top-right-radius: 20px;
-                position: absolute;
+                border-bottom-right-radius: 20px;
+                
             }
             .check{
+                margin-top: 28px;
+                margin-left: 20px;
                 background-color: white;
                 border-radius: 50%;
-                width: 20px;
-                height: 20px;
+                width: 22px;
+                height: 22px;
+            }
+            .fa-check{
+                color: $tertiaire-color;
+                padding-left: 4px;
+                padding-top: 3px;
+                font-size: medium;
+            }
+
+        }
+        .hidden{
+            display: none;
+        }
+        
+        .card:hover{
+            .hidden{
+                display: block;
             }
         }
         
