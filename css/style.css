@@ -3,7 +3,6 @@
 body {
   margin: 0 auto;
   padding: 0;
-  overflow: hidden; /* Empêche le défilement pendant le chargement */
 }
 
 /* Loader CSS */
@@ -469,4 +468,156 @@ header .imgmenu1 {
 }
 .menu1 section .card:hover .hidden {
   display: block;
+}
+
+@media (max-width: 1279px) {
+  header .search {
+    padding-right: 120px;
+    justify-content: center;
+  }
+  header .bg {
+    height: 300px;
+  }
+  header .bg h1 {
+    font-size: 38px;
+    margin-left: 90px;
+  }
+  .listtodo {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .listtodo .dflex {
+    display: flex;
+  }
+  .listtodo .todo {
+    width: 30%;
+  }
+  .restaurants {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .restaurants .card {
+    width: 45%;
+  }
+  .restaurants .grid2 {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .restaurants .gap2 {
+    margin-left: 90px;
+  }
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 100px;
+  }
+  footer img {
+    margin-right: 80px;
+  }
+  footer ul {
+    margin-top: auto;
+    display: flex;
+  }
+  footer ul li {
+    margin-left: 20px;
+  }
+}
+@media (min-width: 1280px) {
+  header .search {
+    padding-right: 120px;
+    justify-content: center;
+  }
+  header .bg {
+    height: 300px;
+  }
+  header .bg h1 {
+    font-size: 38px;
+    margin-left: 120px;
+  }
+  .listtodo {
+    padding-left: 200px;
+    padding-right: 200px;
+  }
+  .listtodo .dflex {
+    display: flex;
+  }
+  .listtodo .todo {
+    width: 30%;
+  }
+  .restaurants {
+    padding-left: 200px;
+    padding-right: 200px;
+  }
+  .restaurants .card {
+    width: 45%;
+  }
+  .restaurants .grid2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .restaurants .gap2 {
+    margin-left: 67px;
+  }
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 100px;
+  }
+  footer img {
+    margin-right: 80px;
+  }
+  footer ul {
+    margin-top: auto;
+    display: flex;
+  }
+  footer ul li {
+    margin-left: 20px;
+  }
+}
+@media (min-width: 1281px) {
+  header .bg h1 {
+    font-size: 38px;
+    margin-left: 180px;
+  }
+  .listtodo {
+    padding-left: 300px;
+    padding-right: 300px;
+  }
+  .listtodo .dflex {
+    display: flex;
+    gap: 20px;
+  }
+  .listtodo .todo {
+    width: 29%;
+  }
+  .restaurants {
+    padding-left: 300px;
+    padding-right: 300px;
+  }
+  .restaurants .card {
+    height: 270px;
+  }
+  .restaurants .card img {
+    height: 200px;
+  }
+  .restaurants .card .imgup2 {
+    -o-object-position: 50% 58%;
+       object-position: 50% 58%;
+  }
+  .restaurants .card .imgup {
+    -o-object-position: 50% 70%;
+       object-position: 50% 70%;
+  }
+  footer img {
+    margin-right: 200px;
+  }
+  footer ul {
+    margin-right: 120px;
+    margin-top: auto;
+    display: flex;
+  }
+  footer ul li {
+    margin-left: 50px;
+  }
 }/*# sourceMappingURL=style.css.map */

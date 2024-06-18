@@ -5,7 +5,7 @@
 body {
     margin: 0 auto;
     padding: 0;
-    overflow: hidden; /* Empêche le défilement pendant le chargement */
+    
 }
 
 /* Loader CSS */
@@ -152,7 +152,7 @@ header {
 
     .bg {
         background-color: $main-bg-color;
-        height: 360px
+        height: 360px;
     }
 }
 
@@ -524,4 +524,211 @@ header {
         }
         
     }
+}
+@media (max-width: 1279px){
+    
+    header{
+        .search{
+        padding-right: 120px;
+        justify-content: center;
+        }
+        .bg{
+            height: 300px;
+             h1{
+            font-size: 38px;
+            margin-left: 90px;
+            }
+        }
+    }
+    
+    // Fonctionnement
+.listtodo {
+    padding-left: 50px;
+    padding-right: 50px;
+    .dflex{
+        display: flex;
+        
+    }
+    .todo {
+       
+        width: 30%;
+        
+
+    }
+}
+.restaurants{
+    
+    padding-left: 50px;
+    padding-right: 50px;
+    
+    .card{
+        width: 45%;
+        
+    }
+    .grid2{
+        display: flex;
+        flex-wrap: wrap;
+        
+        
+    }
+    .gap2{
+        margin-left: 90px;
+    }
+}
+footer{
+    display: flex;
+    flex-direction: row-reverse;
+    height: 100px;
+    img{
+        margin-right: 80px;
+        
+    }
+    ul{
+        margin-top: auto;
+        display: flex;
+        
+        li{
+            margin-left: 20px;
+        }
+    }
+}
+}
+@media (min-width: 1280px){
+    
+    header{
+        .search{
+        padding-right: 120px;
+        justify-content: center;
+        }
+        .bg{
+            height: 300px;
+             h1{
+            font-size: 38px;
+            margin-left: 120px;
+            }
+        }
+    }
+    
+    // Fonctionnement
+.listtodo {
+    padding-left: 200px;
+    padding-right: 200px;
+    .dflex{
+        display: flex;
+        
+    }
+    .todo {
+       
+        width: 30%;
+        
+
+    }
+}
+.restaurants{
+    
+    padding-left: 200px;
+    padding-right: 200px;
+    
+    .card{
+        width: 45%;
+        
+    }
+    .grid2{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        
+    }
+    .gap2{
+        margin-left: 67px;
+    }
+}
+footer{
+    display: flex;
+    flex-direction: row-reverse;
+    height: 100px;
+    img{
+        margin-right: 80px;
+        
+    }
+    ul{
+        margin-top: auto;
+        display: flex;
+        
+        li{
+            margin-left: 20px;
+        }
+    }
+}
+}
+
+@media (min-width: 1281px){
+    header{
+        
+        .bg{
+            
+             h1{
+            font-size: 38px;
+            margin-left: 180px;
+            }
+        }
+    }
+    
+    // Fonctionnement
+.listtodo {
+    padding-left: 300px;
+    padding-right: 300px;
+    .dflex{
+        display: flex;
+        gap: 20px;
+    }
+    .todo {
+       
+        width: 29%;
+        
+
+    }
+}
+
+.restaurants{
+    
+    padding-left: 300px;
+    padding-right: 300px;
+    .card{
+        height: 270px;
+        img{
+            height: 200px;
+        }
+        .imgup2{
+            
+            object-position: 50% 58%;
+            
+        }
+        .imgup{
+            
+            object-position: 50% 70%;
+            
+        }
+    }
+    
+   
+}
+footer{
+    
+    img{
+        margin-right: 200px;
+        
+    }
+    ul{
+        margin-right: 120px;
+        margin-top: auto;
+        display: flex;
+        
+        li{
+            margin-left: 50px;
+        }
+    }
+}
+
+
 }
