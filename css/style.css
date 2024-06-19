@@ -17,8 +17,10 @@ body {
   justify-content: center;
   align-items: center;
   z-index: 9999;
-  animation: fadeOut 1s forwards; /* Animation pour disparaître */
-  animation-delay: 2s; /* Délai avant de disparaître */
+  animation: fadeOut 1s forwards;
+  /* Animation pour disparaître */
+  animation-delay: 2s;
+  /* Délai avant de disparaître */
 }
 
 .loader {
@@ -76,7 +78,8 @@ body {
 .content {
   opacity: 0;
   animation: fadeIn 1s forwards;
-  animation-delay: 2s; /* Afficher le contenu après 3 secondes */
+  animation-delay: 2s;
+  /* Afficher le contenu après 3 secondes */
 }
 
 @keyframes fadeIn {
@@ -333,8 +336,10 @@ footer ul li a {
 
 header .flex {
   display: flex;
-  justify-content: space-between; /* Centre horizontalement */
-  align-items: center; /* Centre verticalement */
+  justify-content: space-between;
+  /* Centre horizontalement */
+  align-items: center;
+  /* Centre verticalement */
 }
 header .flex a {
   color: black;
@@ -356,9 +361,12 @@ header .imgmenu1 {
 .menu1 .back {
   background-image: url("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
   height: 300px;
-  background-size: cover; /* Couvre toute la surface */
-  background-position: center; /* Centre l'image */
-  background-repeat: no-repeat; /* Ne pas répéter l'image */
+  background-size: cover;
+  /* Couvre toute la surface */
+  background-position: center;
+  /* Centre l'image */
+  background-repeat: no-repeat;
+  /* Ne pas répéter l'image */
 }
 .menu1 section {
   margin-top: -60px;
@@ -404,6 +412,17 @@ header .imgmenu1 {
   padding-bottom: 5px;
   border-bottom: 3px solid #99E2D0;
   width: 45px;
+}
+.menu1 section .card:hover .card-txt p,
+.menu1 section .card:hover .card-txt h3 {
+  white-space: nowrap;
+  /* Empêche le retour à la ligne */
+  overflow: hidden;
+  /* Cache le texte qui dépasse */
+  text-overflow: ellipsis;
+  /* Ajoute des points de suspension à la fin du texte */
+  width: 200px;
+  /* Définit une largeur fixe pour l'élément */
 }
 .menu1 section .card {
   padding: 0;
@@ -493,6 +512,45 @@ header .imgmenu1 {
   display: block;
 }
 
+@media (min-width: 768px) {
+  header .search {
+    padding-right: 100px;
+    justify-content: center;
+  }
+  header .headmenu {
+    margin-right: 190px;
+  }
+  .restaurants .card .imgup {
+    -o-object-position: 50% 65%;
+       object-position: 50% 65%;
+  }
+  .menu1 section {
+    margin: -50px 50px 0 50px;
+    padding: 0 100px 0 100px;
+  }
+  .menu1 section .centercommand {
+    text-align: center;
+  }
+  .menu1 section .card:hover .card-txt p,
+  .menu1 section .card:hover .card-txt h3 {
+    white-space: normal; /* Rétablit le comportement normal de retour à la ligne */
+    overflow: visible; /* Affiche tout le contenu qui dépasse */
+    text-overflow: clip; /* Empêche les points de suspension */
+    width: auto; /* Laisse la largeur se calculer dynamiquement */
+  }
+  .menu1 section .titlemod {
+    margin: 0;
+    justify-content: center;
+    text-align: center;
+  }
+  .menu1 section .clip {
+    margin-left: 30px;
+    margin-right: 0px;
+  }
+  .menu1 section .command {
+    margin-left: 0px;
+  }
+}
 @media (min-width: 1024px) {
   header .search {
     padding-right: 120px;
@@ -504,6 +562,9 @@ header .imgmenu1 {
   header .bg h1 {
     font-size: 38px;
     margin-left: 90px;
+  }
+  header .headmenu {
+    margin-right: 310px;
   }
   .listtodo {
     padding-left: 50px;
@@ -521,6 +582,13 @@ header .imgmenu1 {
   }
   .restaurants .card {
     width: 45%;
+    position: relative;
+  }
+  .restaurants .card .newtxt {
+    position: absolute;
+    z-index: 1;
+    right: 20;
+    margin-top: 10px;
   }
   .restaurants .grid2 {
     display: flex;
@@ -547,7 +615,15 @@ header .imgmenu1 {
   .menu1 section {
     margin: -20px 100px 0 100px;
     padding: 0 100px 0 100px;
+  }
+  .menu1 section .titlemod {
+    margin: 0;
+    justify-content: center;
     text-align: center;
+  }
+  .menu1 section .clip {
+    margin-left: 30px;
+    margin-right: 0px;
   }
 }
 @media (min-width: 1280px) {
@@ -561,6 +637,9 @@ header .imgmenu1 {
   header .bg h1 {
     font-size: 38px;
     margin-left: 120px;
+  }
+  header .headmenu {
+    margin-right: 450px;
   }
   .listtodo {
     padding-left: 200px;
@@ -602,11 +681,21 @@ header .imgmenu1 {
   footer ul li {
     margin-left: 20px;
   }
+  .menu1 .back {
+    height: 400px;
+  }
+  .menu1 section {
+    margin-top: -30px;
+    padding: 0 200px 0 200px;
+  }
 }
 @media (min-width: 1281px) {
   header .bg h1 {
     font-size: 38px;
     margin-left: 180px;
+  }
+  header .headmenu {
+    margin-right: 780px;
   }
   .listtodo {
     padding-left: 300px;
@@ -647,5 +736,12 @@ header .imgmenu1 {
   }
   footer ul li {
     margin-left: 50px;
+  }
+  .menu1 .back {
+    height: 580px;
+  }
+  .menu1 section {
+    margin: -40px 200px 0 200px;
+    padding: 0 250px 0 250px;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -5,7 +5,7 @@
 body {
     margin: 0 auto;
     padding: 0;
-    
+
 }
 
 /* Loader CSS */
@@ -20,8 +20,10 @@ body {
     justify-content: center;
     align-items: center;
     z-index: 9999;
-    animation: fadeOut 1s forwards; /* Animation pour disparaître */
-    animation-delay: 2s; /* Délai avant de disparaître */
+    animation: fadeOut 1s forwards;
+    /* Animation pour disparaître */
+    animation-delay: 2s;
+    /* Délai avant de disparaître */
 }
 
 .loader {
@@ -51,30 +53,56 @@ body {
 }
 
 @keyframes scaleUp {
-    0% { transform: translate(-50%, -50%) scale(0); }
-    60%, 100% { transform: translate(-50%, -50%) scale(1); }
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+    }
+
+    60%,
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
 }
 
 @keyframes pulse {
-    0%, 60%, 100% { transform: scale(1); }
-    80% { transform: scale(1.2); }
+
+    0%,
+    60%,
+    100% {
+        transform: scale(1);
+    }
+
+    80% {
+        transform: scale(1.2);
+    }
 }
 
 @keyframes fadeOut {
-    0% { opacity: 1; }
-    100% { opacity: 0; visibility: hidden; }
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
 }
 
 /* Contenu caché initialement */
 .content {
     opacity: 0;
     animation: fadeIn 1s forwards;
-    animation-delay: 2s; /* Afficher le contenu après 3 secondes */
+    animation-delay: 2s;
+    /* Afficher le contenu après 3 secondes */
 }
 
 @keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 
@@ -122,7 +150,7 @@ header {
         }
     }
 
-    
+
 
     h1 {
         font-size: 28px;
@@ -150,6 +178,7 @@ h1,
 a {
     @include font-text;
 }
+
 .clic {
     margin-top: 15px;
     background: linear-gradient(to bottom, $secondary-color, $primary-color);
@@ -244,15 +273,17 @@ a {
     margin-top: 50px;
     background-color: $main-bg-color;
     padding: 25px 20px 15px 20px;
-    
+
     .card {
         padding: 0;
         height: 250px;
         margin-bottom: 30px;
+
         a {
             text-decoration: none;
             color: black;
         }
+
         img {
             position: relative;
             object-position: 50% 61%;
@@ -261,12 +292,14 @@ a {
             border-top-right-radius: 20px;
             border-top-left-radius: 20px;
         }
-        .newtxt{
+
+        .newtxt {
             position: absolute;
             z-index: 1;
             right: 30px;
             margin-top: 10px;
-            p{
+
+            p {
                 font-weight: 500;
                 border-radius: 3px;
                 background-color: $tertiaire-color;
@@ -274,9 +307,10 @@ a {
                 color: $quatro-color;
                 font-size: small;
                 padding: 5px 10px 5px 10px;
-                
+
             }
         }
+
         .imgup {
             object-position: 50% 100%;
         }
@@ -373,59 +407,73 @@ footer {
 
 // Menu 1
 header {
-    .flex{
-       
+    .flex {
+
         display: flex;
-        justify-content: space-between; /* Centre horizontalement */
-        align-items: center;     /* Centre verticalement */
-        a{
+        justify-content: space-between;
+        /* Centre horizontalement */
+        align-items: center;
+
+        /* Centre verticalement */
+        a {
             color: black;
         }
     }
+
     .fa-arrow-right {
-        
+
         margin-left: 20px;
         font-size: large;
     }
-    .imgmenu1{
-       
+
+    .imgmenu1 {
+
         margin-right: 100px;
     }
 }
 
-.menu1{
+.menu1 {
     .command {
         margin-left: 100px;
         width: 190px;
         margin-bottom: 30px;
         margin-top: 30px;
     }
-    .back{
+
+    .back {
         background-image: url("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
         height: 300px;
-        background-size: cover; /* Couvre toute la surface */
-        background-position: center; /* Centre l'image */
-        background-repeat: no-repeat; /* Ne pas répéter l'image */
+        background-size: cover;
+        /* Couvre toute la surface */
+        background-position: center;
+        /* Centre l'image */
+        background-repeat: no-repeat;
+        /* Ne pas répéter l'image */
     }
-    section{
+
+    section {
         margin-top: -60px;
         background-color: $main-bg-color;
         border-top-left-radius: 40px;
         border-top-right-radius: 40px;
         padding: 10px;
-        .dflex{
+
+        .dflex {
             display: flex
         }
-        .titlemod{
+
+        .titlemod {
             margin-top: 10px
         }
-        h1{
+
+        h1 {
             @include font-title;
-            
+
             margin-top: 20px;
             letter-spacing: 1px;
             font-size: 28px;
         }
+
         .clip {
             margin-left: auto;
             margin-right: 30px;
@@ -436,7 +484,7 @@ header {
             clip-path: path("M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402m5.726-20.583c-2.203 0-4.446 1.042-5.726 3.238-1.285-2.206-3.522-3.248-5.719-3.248-3.183 0-6.281 2.187-6.281 6.191 0 4.661 5.571 9.429 12 15.809 6.43-6.38 12-11.148 12-15.809 0-4.011-3.095-6.181-6.274-6.181");
             transform: scale(1);
         }
-    
+
         .clip:hover {
             background: linear-gradient(to top, $secondary-color, $primary-color);
             width: 24px;
@@ -444,34 +492,62 @@ header {
             clip-path: path("M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z");
             transform: scale(1);
         }
-        h2{
+
+        h2 {
             font-size: large;
             font-weight: 400;
             padding-bottom: 5px;
             border-bottom: 3px solid $tertiaire-color;
             width: 45px;
         }
-        .card{
+
+        .card:hover {
+            .card-txt {
+
+                p,
+                h3 {
+                    white-space: nowrap;
+                    /* Empêche le retour à la ligne */
+                    overflow: hidden;
+                    /* Cache le texte qui dépasse */
+                    text-overflow: ellipsis;
+                    /* Ajoute des points de suspension à la fin du texte */
+                    width: 200px;
+                    /* Définit une largeur fixe pour l'élément */
+                }
+            }
+
+        }
+
+        .card {
+
             padding: 0;
             margin-bottom: 10px;
             filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.05));
-            .card-content{
+
+            .card-content {
                 display: flex;
             }
-            h3{
+
+            h3 {
                 @include font-text;
-               margin: 10px 0 0 10px;
+                margin: 10px 0 0 10px;
             }
+
             p {
                 margin: 5px 0 5px 10px;
+
             }
-            .price{
+
+
+            .price {
                 margin-right: 15px;
                 margin-top: 40px;
                 margin-left: auto;
                 font-weight: bold;
             }
-            .bigcheck{
+
+            .bigcheck {
                 height: 75px;
                 width: 60px;
                 top: 0;
@@ -479,9 +555,10 @@ header {
                 background-color: $tertiaire-color;
                 border-top-right-radius: 20px;
                 border-bottom-right-radius: 20px;
-                
+
             }
-            .check{
+
+            .check {
                 margin-top: 28px;
                 margin-left: 20px;
                 background-color: white;
@@ -489,281 +566,451 @@ header {
                 width: 22px;
                 height: 22px;
             }
-            .fa-check{
+
+            .fa-check {
                 color: $tertiaire-color;
                 padding-left: 4px;
                 padding-top: 3px;
                 font-size: medium;
             }
 
+
         }
+
         .box {
             opacity: 0;
             animation: fadeIn 1s forwards;
         }
-        
+
         .box1 {
             animation-delay: 0s;
         }
-        
+
         .box2 {
             animation-delay: 1s;
         }
-        
+
         .box3 {
             animation-delay: 2s;
         }
+
         .box4 {
             animation-delay: 3s;
         }
+
         .box5 {
             animation-delay: 4s;
         }
+
         .box6 {
             animation-delay: 5s;
         }
+
         .box7 {
             animation-delay: 6s;
         }
+
         .box8 {
             animation-delay: 7s;
         }
+
         .box9 {
             animation-delay: 8s;
         }
-        
+
         @keyframes fadeIn {
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
-        } // Créer l'animation qui change l'opacité de 0 à 1 et applique une transformation (facultative) pour animer l'apparition.
-        .hidden{
+        }
+
+        // Créer l'animation qui change l'opacité de 0 à 1 et applique une transformation (facultative) pour animer l'apparition.
+        .hidden {
             display: none;
         }
-        
-        .card:hover{
-            .hidden{
+
+        .card:hover {
+            .hidden {
                 display: block;
             }
         }
-        
+
     }
 }
-@media (min-width: 1024px){
-    
-    header{
-        .search{
-        padding-right: 120px;
-        justify-content: center;
+
+@media(min-width: 768px) {
+    header {
+        .search {
+            padding-right: 100px;
+            justify-content: center;
         }
-        .bg{
+
+        .headmenu {
+            margin-right: 190px;
+        }
+
+
+    }
+
+    .restaurants {
+        .card {
+            .imgup {
+
+                object-position: 50% 65%;
+
+            }
+        }
+    }
+
+    .menu1 {
+
+        section {
+            margin: -50px 50px 0 50px;
+            padding: 0 100px 0 100px;
+            .centercommand{
+                text-align: center;
+            }
+            .card:hover {
+                .card-txt {
+    
+                    p,
+                    h3 {
+                        white-space: normal;       /* Rétablit le comportement normal de retour à la ligne */
+                        overflow: visible;         /* Affiche tout le contenu qui dépasse */
+                        text-overflow: clip;       /* Empêche les points de suspension */
+                        width: auto;               /* Laisse la largeur se calculer dynamiquement */
+                    }
+                }
+    
+            }
+            
+            .titlemod {
+                margin: 0;
+                justify-content: center;
+                text-align: center;
+            }
+
+            .clip {
+                margin-left: 30px;
+                margin-right: 00px;
+
+            }
+
+            .command {
+                margin-left: 0px;
+            }
+        }
+
+    }
+
+}
+
+@media (min-width: 1024px) {
+
+    header {
+        .search {
+            padding-right: 120px;
+            justify-content: center;
+        }
+
+        .bg {
             height: 300px;
-             h1{
-            font-size: 38px;
+
+            h1 {
+                font-size: 38px;
+                margin-left: 90px;
+            }
+        }
+
+        .headmenu {
+            margin-right: 310px;
+        }
+
+    }
+
+    // Fonctionnement
+    .listtodo {
+        padding-left: 50px;
+        padding-right: 50px;
+
+        .dflex {
+            display: flex;
+
+        }
+
+        .todo {
+
+            width: 30%;
+
+
+        }
+    }
+
+    .restaurants {
+
+        padding-left: 50px;
+        padding-right: 50px;
+
+        .card {
+            width: 45%;
+            position: relative;
+
+            .newtxt {
+
+                position: absolute;
+                z-index: 1;
+                right: 20;
+                margin-top: 10px;
+            }
+        }
+
+        .grid2 {
+            display: flex;
+            flex-wrap: wrap;
+
+
+        }
+
+        .gap2 {
             margin-left: 90px;
+        }
+    }
+
+    footer {
+        display: flex;
+        flex-direction: row-reverse;
+        height: 100px;
+
+        img {
+            margin-right: 80px;
+
+        }
+
+        ul {
+            margin-top: auto;
+            display: flex;
+
+            li {
+                margin-left: 20px;
             }
         }
     }
-    
-    // Fonctionnement
-.listtodo {
-    padding-left: 50px;
-    padding-right: 50px;
-    .dflex{
-        display: flex;
-        
-    }
-    .todo {
-       
-        width: 30%;
-        
+
+    //menu1
+    .menu1 {
+
+        section {
+            
+            margin: -20px 100px 0 100px;
+            padding: 0 100px 0 100px;
+            
+
+            .titlemod {
+                margin: 0;
+                justify-content: center;
+                text-align: center;
+            }
+
+            .clip {
+                margin-left: 30px;
+                margin-right: 00px;
+
+            }
+        }
 
     }
 }
-.restaurants{
-    
-    padding-left: 50px;
-    padding-right: 50px;
-    
-    .card{
-        width: 45%;
-        
-    }
-    .grid2{
-        display: flex;
-        flex-wrap: wrap;
-        
-        
-    }
-    .gap2{
-        margin-left: 90px;
-    }
-}
-footer{
-    display: flex;
-    flex-direction: row-reverse;
-    height: 100px;
-    img{
-        margin-right: 80px;
-        
-    }
-    ul{
-        margin-top: auto;
-        display: flex;
-        
-        li{
-            margin-left: 20px;
+
+@media (min-width: 1280px) {
+
+    header {
+        .search {
+            padding-right: 120px;
+            justify-content: center;
         }
-    }
-}
-//menu1
-.menu1{
-    
-    section{
-        margin: -20px 100px 0 100px;
-        padding: 0 100px 0 100px;
-        text-align: center;
-    }
-    
-}
-}
-@media (min-width: 1280px){
-    
-    header{
-        .search{
-        padding-right: 120px;
-        justify-content: center;
-        }
-        .bg{
+
+        .bg {
             height: 300px;
-             h1{
-            font-size: 38px;
-            margin-left: 120px;
+
+            h1 {
+                font-size: 38px;
+                margin-left: 120px;
+            }
+        }
+
+        .headmenu {
+            margin-right: 450px;
+        }
+    }
+
+    // Fonctionnement
+    .listtodo {
+        padding-left: 200px;
+        padding-right: 200px;
+
+        .dflex {
+            display: flex;
+
+        }
+
+        .todo {
+
+            width: 30%;
+
+
+        }
+    }
+
+    .restaurants {
+
+        padding-left: 200px;
+        padding-right: 200px;
+
+        .card {
+            width: 45%;
+
+        }
+
+        .grid2 {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+
+        }
+
+        .gap2 {
+            margin-left: 67px;
+        }
+    }
+
+    footer {
+        display: flex;
+        flex-direction: row-reverse;
+        height: 100px;
+
+        img {
+            margin-right: 80px;
+
+        }
+
+        ul {
+            margin-top: auto;
+            display: flex;
+
+            li {
+                margin-left: 20px;
             }
         }
     }
-    
-    // Fonctionnement
-.listtodo {
-    padding-left: 200px;
-    padding-right: 200px;
-    .dflex{
-        display: flex;
-        
-    }
-    .todo {
-       
-        width: 30%;
-        
+
+    .menu1 {
+        .back {
+            height: 400px;
+        }
+
+        section {
+            margin-top: -30px;
+            padding: 0 200px 0 200px;
+
+
+        }
 
     }
 }
-.restaurants{
-    
-    padding-left: 200px;
-    padding-right: 200px;
-    
-    .card{
-        width: 45%;
-        
-    }
-    .grid2{
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        
-    }
-    .gap2{
-        margin-left: 67px;
-    }
-}
-footer{
-    display: flex;
-    flex-direction: row-reverse;
-    height: 100px;
-    img{
-        margin-right: 80px;
-        
-    }
-    ul{
-        margin-top: auto;
-        display: flex;
-        
-        li{
-            margin-left: 20px;
+
+@media (min-width: 1281px) {
+    header {
+
+        .bg {
+
+            h1 {
+                font-size: 38px;
+                margin-left: 180px;
+            }
+        }
+
+        .headmenu {
+            margin-right: 780px;
         }
     }
-}
-}
 
-@media (min-width: 1281px){
-    header{
-        
-        .bg{
-            
-             h1{
-            font-size: 38px;
-            margin-left: 180px;
+    // Fonctionnement
+    .listtodo {
+        padding-left: 300px;
+        padding-right: 300px;
+
+        .dflex {
+            display: flex;
+            gap: 20px;
+        }
+
+        .todo {
+
+            width: 29%;
+
+
+        }
+    }
+
+    .restaurants {
+
+        padding-left: 300px;
+        padding-right: 300px;
+
+        .card {
+            height: 270px;
+
+            img {
+                height: 200px;
+            }
+
+            .imgup2 {
+
+                object-position: 50% 58%;
+
+            }
+
+            .imgup {
+
+                object-position: 50% 70%;
+
+            }
+        }
+
+
+    }
+
+    footer {
+
+        img {
+            margin-right: 200px;
+
+        }
+
+        ul {
+            margin-right: 120px;
+            margin-top: auto;
+            display: flex;
+
+            li {
+                margin-left: 50px;
             }
         }
     }
-    
-    // Fonctionnement
-.listtodo {
-    padding-left: 300px;
-    padding-right: 300px;
-    .dflex{
-        display: flex;
-        gap: 20px;
-    }
-    .todo {
-       
-        width: 29%;
-        
+
+    .menu1 {
+        .back {
+            height: 580px;
+        }
+
+        section {
+            margin: -40px 200px 0 200px;
+            padding: 0 250px 0 250px;
+
+
+        }
 
     }
-}
-
-.restaurants{
-    
-    padding-left: 300px;
-    padding-right: 300px;
-    .card{
-        height: 270px;
-        img{
-            height: 200px;
-        }
-        .imgup2{
-            
-            object-position: 50% 58%;
-            
-        }
-        .imgup{
-            
-            object-position: 50% 70%;
-            
-        }
-    }
-    
-   
-}
-footer{
-    
-    img{
-        margin-right: 200px;
-        
-    }
-    ul{
-        margin-right: 120px;
-        margin-top: auto;
-        display: flex;
-        
-        li{
-            margin-left: 50px;
-        }
-    }
-}
-
 
 }
