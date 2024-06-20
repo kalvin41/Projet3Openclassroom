@@ -192,6 +192,10 @@ a {
     filter: drop-shadow(1px 4px 3px rgba(0, 0, 0, 0.2));
 
 }
+.clic:hover{
+    background: linear-gradient(to bottom, $lighter-secondary-color, $lighter-primary-color);
+    filter: drop-shadow(1px 4px 3px rgba(0, 0, 0, 0.5));
+}
 
 
 .card {
