@@ -625,7 +625,7 @@ header .imgmenu1 {
   .restaurants .card .newtxt {
     position: absolute;
     z-index: 1;
-    right: 20;
+    right: 20px;
     margin-top: 10px;
   }
   .restaurants .grid2 {
