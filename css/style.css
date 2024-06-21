@@ -148,6 +148,15 @@ a {
   font-family: "Roboto";
 }
 
+/* Définition de l'animation fadeInText */
+@keyframes fadeInText {
+  0% {
+    color: white; /* Début de l'animation : texte transparent */
+  }
+  100% {
+    color: white; /* Fin de l'animation : texte blanc */
+  }
+}
 .clic {
   margin-top: 15px;
   background: linear-gradient(to bottom, #FF79DA, #9356DC);
@@ -159,11 +168,14 @@ a {
   padding-right: 25px;
   border: none;
   filter: drop-shadow(1px 4px 3px rgba(0, 0, 0, 0.2));
+  transition: filter 0.3s ease; /* Transition pour l'effet de filtre */
 }
 
 .clic:hover {
-  background: linear-gradient(to bottom, #fface8, #ae80e5);
+  background: linear-gradient(to bottom, #ff93e1, #a16be0);
   filter: drop-shadow(1px 4px 3px rgba(0, 0, 0, 0.5));
+  color: transparent; /* Rend le texte transparent au début de l'animation */
+  animation: fadeInText 1s forwards; /* Applique l'animation fadeInText */
 }
 
 .card {
@@ -390,8 +402,10 @@ header .imgmenu1 {
   /* Ne pas répéter l'image */
 }
 
+.menu1 .centercommand {
+  text-align: center;
+}
 .menu1 .command {
-  margin-left: 100px;
   width: 190px;
   margin-bottom: 30px;
   margin-top: 30px;
@@ -434,7 +448,7 @@ header .imgmenu1 {
   background: black;
   -webkit-clip-path: path("M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402m5.726-20.583c-2.203 0-4.446 1.042-5.726 3.238-1.285-2.206-3.522-3.248-5.719-3.248-3.183 0-6.281 2.187-6.281 6.191 0 4.661 5.571 9.429 12 15.809 6.43-6.38 12-11.148 12-15.809 0-4.011-3.095-6.181-6.274-6.181");
           clip-path: path("M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402m5.726-20.583c-2.203 0-4.446 1.042-5.726 3.238-1.285-2.206-3.522-3.248-5.719-3.248-3.183 0-6.281 2.187-6.281 6.191 0 4.661 5.571 9.429 12 15.809 6.43-6.38 12-11.148 12-15.809 0-4.011-3.095-6.181-6.274-6.181");
-  transform: scale(1.1);
+  transform: scale(1.3);
 }
 .menu1 section .clip:hover {
   background: linear-gradient(to top, #FF79DA, #9356DC);
@@ -442,7 +456,7 @@ header .imgmenu1 {
   height: 24px;
   -webkit-clip-path: path("M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z");
           clip-path: path("M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z");
-  transform: scale(1.1);
+  transform: scale(1.3);
 }
 .menu1 section h2 {
   font-size: large;
@@ -463,12 +477,14 @@ header .imgmenu1 {
   /* Définit une largeur fixe pour l'élément */
 }
 .menu1 section .card {
+  overflow: hidden;
   padding: 0;
   margin-bottom: 10px;
   filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.05));
 }
 .menu1 section .card .card-content {
   display: flex;
+  position: relative;
 }
 .menu1 section .card h3 {
   font-family: "Roboto";
@@ -482,19 +498,25 @@ header .imgmenu1 {
   margin-top: 40px;
   margin-left: auto;
   font-weight: bold;
+  animation: none;
 }
 .menu1 section .card .bigcheck {
-  height: 75px;
+  position: absolute;
+  height: 65px;
   width: 60px;
   top: 0;
-  right: 0;
+  right: -50px;
   background-color: #99E2D0;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
+  opacity: 0;
+  /* Commencer avec une opacité de 0 */
+  animation: none;
+  /* Pas d'animation par défaut */
 }
 .menu1 section .card .check {
-  margin-top: 28px;
-  margin-left: 20px;
+  margin-top: 22px;
+  margin-left: 18px;
   background-color: white;
   border-radius: 50%;
   width: 22px;
@@ -543,11 +565,41 @@ header .imgmenu1 {
     transform: translateY(0);
   }
 }
-.menu1 section .hidden {
-  display: none;
+@keyframes slideIn {
+  from {
+    right: -50px;
+    /* Cacher l'élément hors de l'écran à droite */
+    opacity: 1;
+    /* Commencer avec une opacité de 0 */
+  }
+  to {
+    right: 0;
+    /* Placer l'élément à sa position d'origine */
+    opacity: 1;
+    /* Finir avec une opacité de 1 */
+  }
+}
+@keyframes slideInPrice {
+  from {
+    margin-right: 15px;
+    /* Position initiale */
+    opacity: 1;
+    /* Commencer avec une opacité de 0 */
+  }
+  to {
+    margin-right: 80px;
+    /* Position finale */
+    opacity: 1;
+    /* Finir avec une opacité de 1 */
+  }
+}
+.menu1 section .card:hover .price {
+  animation: slideInPrice 0.5s ease forwards;
+  /* Appliquer l'animation au survol */
 }
 .menu1 section .card:hover .hidden {
-  display: block;
+  animation: slideIn 0.5s ease forwards;
+  /* Appliquer l'animation au survol */
 }
 
 @media (min-width: 768px) {
@@ -566,15 +618,16 @@ header .imgmenu1 {
     margin: -50px 50px 0 50px;
     padding: 0 100px 0 100px;
   }
-  .menu1 section .centercommand {
-    text-align: center;
-  }
   .menu1 section .card:hover .card-txt p,
   .menu1 section .card:hover .card-txt h3 {
-    white-space: normal; /* Rétablit le comportement normal de retour à la ligne */
-    overflow: visible; /* Affiche tout le contenu qui dépasse */
-    text-overflow: clip; /* Empêche les points de suspension */
-    width: auto; /* Laisse la largeur se calculer dynamiquement */
+    white-space: normal;
+    /* Rétablit le comportement normal de retour à la ligne */
+    overflow: visible;
+    /* Affiche tout le contenu qui dépasse */
+    text-overflow: clip;
+    /* Empêche les points de suspension */
+    width: auto;
+    /* Laisse la largeur se calculer dynamiquement */
   }
   .menu1 section .titlemod {
     margin: 0;
@@ -584,9 +637,6 @@ header .imgmenu1 {
   .menu1 section .clip {
     margin-left: 30px;
     margin-right: 0px;
-  }
-  .menu1 section .command {
-    margin-left: 0px;
   }
 }
 @media (min-width: 1024px) {
